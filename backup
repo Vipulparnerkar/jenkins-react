@@ -19,6 +19,27 @@ node {
         sh 'docker rmi -f react-app vipul1801/react-jenkins-app'
       
     }
+    stage('deploy (staging)') {
+
+            steps {
+
+                echo 'Deploying Staging...'
+
+                region: us-east-1
+
+                app:    docker-react
+
+                env:    Dockerreact-env
+
+                bucket: elasticbeanstalk-us-east-1-938243399648
+
+                key:    docker-react
+
+                branch: master
+
+            }
+
+        }
   }
   catch (err) {
     throw err
