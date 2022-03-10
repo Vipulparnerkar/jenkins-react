@@ -1,11 +1,11 @@
 {
-    "AWSEBDockerrunVersion": "1",
-    "Image": {
-      "Name": "938243399648.dkr.ecr.us-east-1.amazonaws.com/react-jenkins-app"
-    },
-    "Ports": [
-      {
-        "ContainerPort": 3000
-      }
-    ]
+  "AWSEBDockerrunVersion": 1,
+  "Image": {
+    "Name": "938243399648.dkr.ecr.us-east-1.amazonaws.com/react-jenkins-app",
+    "Update": "true"
+  },
+  "Ports": {
+    "ContainerPort": "3000",
+    "HostPort": "3030"
   }
+} 
