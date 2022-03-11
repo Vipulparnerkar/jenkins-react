@@ -20,7 +20,7 @@ node {
       
     // }
     stage('Deploy') {
-        sh 'docker build -t react-app --no-cache .'
+        sh 'docker buildx build --platform=linux/amd64 -t react-app --no-cache .'
         // sh 'docker tag react-app vipul1801/react-jenkins-app'
         sh "aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 938243399648.dkr.ecr.us-east-1.amazonaws.com"
 
