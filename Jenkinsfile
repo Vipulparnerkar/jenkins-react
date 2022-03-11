@@ -11,14 +11,14 @@ node {
     }
    
     
-    stage('Deploy'){
+    // stage('Deploy'){
       
-        sh 'docker build -t react-app --no-cache .'
-        sh 'docker tag react-app vipul1801/react-jenkins-app'
-        sh 'docker push vipul1801/react-jenkins-app'
-        sh 'docker rmi -f react-app vipul1801/react-jenkins-app'
+    //     sh 'docker build -t react-app --no-cache .'
+    //     sh 'docker tag react-app vipul1801/react-jenkins-app'
+    //     sh 'docker push vipul1801/react-jenkins-app'
+    //     sh 'docker rmi -f react-app vipul1801/react-jenkins-app'
       
-    }
+    // }
     stage('Deploy') {
         sh 'docker build -t react-app --no-cache .'
         // sh 'docker tag react-app vipul1801/react-jenkins-app'
